@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- axios -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js" integrity="sha512-lTLt+W7MrmDfKam+r3D2LURu0F47a3QaW5nF0c6Hl0JDZ57ruei+ovbg7BrZ+0bjVJ5YgzsAWE+RreERbpPE1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- /axios -->
+        <title>Vue Email List</title>
+    </head>
+    <body>
+        <div id="root">
+            <ul v-if="mailingList.length == 10">
+                <li v-for="(email, index) in mailingList" :key="index">
+                    {{email}}
+                </li>
+            </ul>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
