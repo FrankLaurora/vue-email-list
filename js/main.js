@@ -5,17 +5,14 @@ const app = new Vue({
         emailUrl: 'https://flynn.boolean.careers/exercises/api/random/mail',
 
         mailingList: [],
-
-        newEmail: null
     },
 
     methods: {
         getNewEmail: function(){
             axios.get(this.emailUrl).then(
                 (response) => {
-                    this.newEmail = response.data.response;
-                    console.log(this.newEmail);
-                    this.mailingList.push(this.newEmail)
+                    let newEmail = response.data.response;
+                    this.mailingList.push(newEmail);
                 }
             );
         },
